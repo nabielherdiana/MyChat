@@ -118,8 +118,8 @@
 /* Layout Dimensions */
 .story-layout {
     width: 450px;
-    height: 720px;
-    /* Reduced from 800px for better mobile fit */
+    height: 800px;
+    /* Restored for proper footer visibility */
 }
 
 .post-layout {
@@ -329,8 +329,11 @@
 
 /* Contributors */
 .wrapped-section {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     flex: 1;
+    max-height: 280px;
+    /* Limit height to ensure footer fits */
+    overflow: hidden;
 }
 
 .wrapped-section-title {
