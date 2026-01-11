@@ -581,7 +581,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    margin-bottom: auto;
+    margin-bottom: 50px;
+    /* Space for footer */
 }
 
 .highlight-item {
