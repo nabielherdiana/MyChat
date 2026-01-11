@@ -143,6 +143,18 @@
     /* Space for footer */
 }
 
+.wrapped-footer {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 16px;
+    /* Add breathing room from content above */
+    margin-top: 16px;
+    /* Added for more space */
+}
+
 /* Background Layer */
 .wrapped-bg {
     position: absolute;
