@@ -803,6 +803,11 @@ li {
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
 
+    /* Increase base font size for readability */
+    body {
+        font-size: 16px;
+    }
+
     .what-this-is,
     .limits-grid {
         grid-template-columns: 1fr;
@@ -811,6 +816,7 @@ li {
     .metadata-card {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
+        padding: var(--space-lg);
     }
 
     .header-controls {
@@ -818,24 +824,59 @@ li {
     }
 
     .theme-toggle {
-        padding: 4px;
+        padding: 6px;
     }
 
     .theme-btn {
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
     }
 
     .section {
-        padding: var(--space-2xl) 0;
+        padding: var(--space-xl) 0;
     }
 
     .upload-area {
-        padding: var(--space-2xl);
+        padding: var(--space-xl);
+        min-height: 200px;
     }
 
     .intro-section h2 {
-        font-size: var(--font-size-2xl);
+        font-size: var(--font-size-xl);
+    }
+
+    /* Cards: better mobile sizing */
+    .stat-card,
+    .analysis-card {
+        padding: var(--space-lg);
+    }
+
+    .stat-card h3,
+    .analysis-card h3 {
+        font-size: 1rem;
+    }
+
+    /* Touch-friendly buttons */
+    .btn,
+    button {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    /* Better spacing for containers */
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Participant filter: compact on mobile */
+    .participant-filter-container {
+        padding: 16px;
+    }
+
+    .filter-title {
+        font-size: 1rem;
     }
 }
 
