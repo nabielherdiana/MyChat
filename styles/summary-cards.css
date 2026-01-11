@@ -396,15 +396,17 @@
 }
 
 /* DUO MODE: Special Layout for exactly 2 participants (Landscape) */
-/* DUO MODE: Story Layout (Portrait) */
+/* DUO MODE: Story Layout (Portrait) - Compact */
 .story-layout .wrapped-contributors.participant-count-2 {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 12px;
+    /* Reduced from 24px */
     align-content: center;
 }
 
 .story-layout .wrapped-contributors.participant-count-2 .contributor-item {
-    padding: 24px;
+    padding: 16px;
+    /* Reduced from 24px */
     flex-direction: column;
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
@@ -412,15 +414,17 @@
 }
 
 .story-layout .wrapped-contributors.participant-count-2 .contributor-rank {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    width: 32px;
+    /* Reduced from 40px */
+    height: 32px;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
 }
 
 .story-layout .wrapped-contributors.participant-count-2 .contributor-name {
-    font-size: 1.3rem;
-    margin-bottom: 4px;
+    font-size: 1.1rem;
+    /* Reduced from 1.3rem */
+    margin-bottom: 2px;
 }
 
 .post-layout .wrapped-contributors.participant-count-2 {
