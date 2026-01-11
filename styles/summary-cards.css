@@ -732,10 +732,17 @@ padding: 12px 16px;
 /* ====== MOBILE RESPONSIVENESS ====== */
 @media (max-width: 850px) {
     .summary-cards-section {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        /* Add bottom padding */
         overflow-x: hidden;
-        /* Prevent page scroll triggers */
+    }
+
+    /* Add spacing to controls */
+    .summary-controls {
+        padding: 0 16px;
+        gap: 12px;
     }
 
     .chat-wrapped-card {
@@ -748,12 +755,16 @@ padding: 12px 16px;
     /* Scale Story (450px width) */
     .chat-wrapped-card.story-layout {
         transform: scale(0.85);
+        margin-top: 20px;
+        /* Add top margin */
     }
 
     /* Scale Landscape (800px width) -> Needs big shrink on phone */
     .chat-wrapped-card.post-layout {
         transform: scale(0.45);
         margin-bottom: -250px;
+        margin-top: 20px;
+        /* Add top margin */
     }
 }
 

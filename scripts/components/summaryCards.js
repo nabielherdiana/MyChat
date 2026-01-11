@@ -294,7 +294,8 @@ export function switchCardTheme(theme) {
 
     // Update buttons
     btns.forEach(btn => {
-        if (btn.getAttribute('onclick').includes(theme)) {
+        const onClick = btn.getAttribute('onclick');
+        if (onClick && onClick.includes(theme)) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
