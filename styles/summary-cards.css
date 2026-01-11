@@ -331,9 +331,7 @@
 .wrapped-section {
     margin-bottom: 12px;
     flex: 1;
-    max-height: 280px;
-    /* Limit height to ensure footer fits */
-    overflow: hidden;
+    /* No max-height - let items be compact instead */
 }
 
 .wrapped-section-title {
@@ -408,8 +406,8 @@
 }
 
 .story-layout .wrapped-contributors.participant-count-2 .contributor-item {
-    padding: 16px;
-    /* Reduced from 24px */
+    padding: 10px;
+    /* Very compact */
     flex-direction: column;
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
