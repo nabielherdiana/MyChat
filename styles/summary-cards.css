@@ -347,9 +347,6 @@
     /* Don't stretch - let content dictate size */
 }
 
-/* No max-height - let items be compact instead */
-}
-
 .wrapped-section-title {
     font-size: 0.8rem;
     font-weight: 600;
