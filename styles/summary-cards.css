@@ -118,8 +118,8 @@
 /* Layout Dimensions */
 .story-layout {
     width: 450px;
-    height: 800px;
-    /* Slightly wider for better 2-col grid */
+    height: 720px;
+    /* Reduced from 800px for better mobile fit */
 }
 
 .post-layout {
@@ -132,15 +132,15 @@
 .wrapped-content {
     position: relative;
     z-index: 2;
-    padding: 24px 20px;
-    /* Reduced padding */
+    padding: 16px 16px;
+    /* Compact padding */
     height: auto;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding-bottom: 50px;
-    /* Space for absolute footer */
+    padding-bottom: 45px;
+    /* Space for footer */
 }
 
 /* Background Layer */
@@ -573,19 +573,22 @@
 
 .highlight-item {
     background: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 16px;
+    border-radius: 10px;
+    padding: 10px;
+    /* Reduced from 16px */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80px;
+    min-height: 60px;
+    /* Reduced from 80px */
 }
 
 .highlight-icon {
-    font-size: 1.8rem;
-    margin-bottom: 6px;
+    font-size: 1.5rem;
+    /* Reduced from 1.8rem */
+    margin-bottom: 4px;
 }
 
 .highlight-value {
