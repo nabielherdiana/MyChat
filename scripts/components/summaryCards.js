@@ -190,7 +190,7 @@ export function generateSummaryCards(analysisResults, messages) {
                         </div>
                     </div>
                      <div class="wrapped-footer">
-                        <span class="wrapped-brand">Made by mychat.nabielherdiana.my.id</span>
+                        <span class="wrapped-brand">Created with MyChat (https://bit.ly/MyChatGueh)</span>
                     </div>
                 </div>
             </div>
