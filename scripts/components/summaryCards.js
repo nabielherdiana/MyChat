@@ -125,7 +125,7 @@ export function generateSummaryCards(analysisResults, messages) {
                     </div>
                     
                     <div class="wrapped-footer">
-                        <span class="wrapped-brand">Created with MyChat ✨</span>
+                        <span class="wrapped-brand">Created with MyChat (https://bit.ly/MyChatGueh)</span>
                     </div>
                 </div>
             </div>
