@@ -4,7 +4,7 @@
 
 ## 🚀 Key Features
 - **Chat Wrapped Card**: Beautiful summary stats ready to share on Instagram Stories/Status.
-- **Top Contributors**: See who talks the most! (Includes a special **Duo Mode** for 2-person chats 🥊).
+- **Top Contributors**: See who talks the most!
 - **Deep Analytics**:
   - 📅 **Peak Hours**: When are you most active?
   - 👻 **Response Time**: How fast do they reply? (The truth revealed!)
