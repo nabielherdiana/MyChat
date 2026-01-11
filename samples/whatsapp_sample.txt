@@ -1,0 +1,81 @@
+1/1/24, 9:00 AM - Alice: Hey! How are you doing? 🙂
+1/1/24, 9:05 AM - Bob: Hey! I'm good, thanks! Just got back from a morning jog. How about you?
+1/1/24, 9:08 AM - Alice: That's awesome! I've been meaning to start jogging too. Any tips for beginners?
+1/1/24, 9:12 AM - Bob: Start slow, don't push yourself too hard in the beginning. And good shoes are important!
+1/1/24, 9:15 AM - Alice: Thanks! I'll definitely look into getting proper running shoes
+1/1/24, 9:18 AM - Bob: Let me know if you need any recommendations!
+1/1/24, 2:30 PM - Alice: Hey, are you free this weekend?
+1/1/24, 2:45 PM - Bob: Yeah, I should be free on Saturday. What's up?
+1/1/24, 2:48 PM - Alice: There's this new coffee shop downtown. Want to check it out?
+1/1/24, 2:52 PM - Bob: Sure! That sounds great. What time works for you?
+1/1/24, 2:55 PM - Alice: How about 3 PM?
+1/1/24, 2:57 PM - Bob: Perfect! See you then!
+1/2/24, 10:00 AM - Bob: Good morning! Just wanted to say I had a great time yesterday
+1/2/24, 10:30 AM - Alice: Good morning! Me too, the coffee was amazing!
+1/2/24, 10:35 AM - Bob: Right? And the atmosphere was so cozy
+1/2/24, 10:40 AM - Alice: We should definitely go back sometime
+1/2/24, 10:42 AM - Bob: Absolutely! Maybe next weekend?
+1/2/24, 10:45 AM - Alice: Sounds like a plan!
+1/3/24, 8:00 AM - Alice: Hey, quick question about work
+1/3/24, 8:30 AM - Bob: Sure, what's up?
+1/3/24, 8:35 AM - Alice: Do you know when the project deadline is?
+1/3/24, 8:40 AM - Bob: I think it's next Friday, but let me double check
+1/3/24, 8:45 AM - Bob: Yeah, confirmed. Friday the 12th
+1/3/24, 8:47 AM - Alice: Great, thanks! That gives us more time than I thought
+1/3/24, 6:00 PM - Bob: How was your day?
+1/3/24, 6:30 PM - Alice: Pretty good! Got a lot of work done. You?
+1/3/24, 6:35 PM - Bob: Same here. Feeling productive today
+1/4/24, 9:00 AM - Alice: Morning! Did you see the news?
+1/4/24, 9:15 AM - Bob: Not yet, what happened?
+1/4/24, 9:18 AM - Alice: They announced a new park is being built near us!
+1/4/24, 9:22 AM - Bob: Oh that's exciting! We should check it out when it opens
+1/4/24, 9:25 AM - Alice: Definitely! It's supposed to have hiking trails
+1/5/24, 10:00 AM - Bob: Hey, are you still up for coffee on Saturday?
+1/5/24, 10:45 AM - Alice: Yes! Looking forward to it
+1/5/24, 10:48 AM - Bob: Great! Same time, same place?
+1/5/24, 11:00 AM - Alice: Works for me!
+1/6/24, 3:00 PM - Alice: At the coffee shop! Where are you?
+1/6/24, 3:02 PM - Bob: Just parking, be there in 5!
+1/6/24, 3:08 PM - Bob: Here!
+1/6/24, 6:00 PM - Bob: Thanks for another great afternoon!
+1/6/24, 6:15 PM - Alice: Thank you too! I really enjoy our coffee dates
+1/6/24, 6:18 PM - Bob: Me too! We should make this a regular thing
+1/6/24, 6:20 PM - Alice: Agreed! 😊
+1/7/24, 8:00 AM - Alice: Happy Sunday!
+1/7/24, 9:00 AM - Bob: Happy Sunday! Any plans for today?
+1/7/24, 9:05 AM - Alice: Just relaxing at home. Maybe watch a movie
+1/7/24, 9:10 AM - Bob: Nice! What are you thinking of watching?
+1/7/24, 9:15 AM - Alice: Not sure yet, any recommendations?
+1/7/24, 9:20 AM - Bob: Have you seen The Matrix? It's a classic
+1/7/24, 9:25 AM - Alice: Good idea! I'll watch that
+1/8/24, 7:30 AM - Bob: Good morning! Ready for a new week?
+1/8/24, 8:00 AM - Alice: Morning! As ready as I'll ever be 😅
+1/8/24, 8:05 AM - Bob: Haha I feel that! Good luck today
+1/8/24, 8:08 AM - Alice: Thanks, you too!
+1/10/24, 10:00 AM - Alice: Hey, haven't heard from you in a bit. Everything okay?
+1/10/24, 12:00 PM - Bob: Hey! Sorry, been super busy with work
+1/10/24, 12:05 PM - Alice: No worries! Just checking in
+1/10/24, 12:10 PM - Bob: Thanks for understanding. This week has been crazy
+1/12/24, 6:00 PM - Bob: Finally done with that project!
+1/12/24, 7:00 PM - Alice: Congrats! That's great news
+1/12/24, 7:10 PM - Bob: Thanks! Ready to have some free time again
+1/14/24, 9:00 AM - Alice: Want to grab coffee again this weekend?
+1/14/24, 11:00 AM - Bob: Maybe, let me check my schedule
+1/14/24, 5:00 PM - Alice: Any luck?
+1/14/24, 6:30 PM - Bob: Sorry, might have family stuff. I'll let you know
+1/15/24, 10:00 AM - Alice: No worries, just let me know when you're free
+1/15/24, 3:00 PM - Bob: Will do
+1/18/24, 8:00 AM - Alice: Hey! How was your weekend?
+1/18/24, 12:00 PM - Bob: It was okay. How about yours?
+1/18/24, 12:30 PM - Alice: Pretty chill. Missed our coffee though!
+1/18/24, 3:00 PM - Bob: Yeah, sorry about that
+1/20/24, 9:00 AM - Alice: Want to try again this weekend?
+1/20/24, 4:00 PM - Bob: I'll see
+1/22/24, 10:00 AM - Alice: Did you decide about this weekend?
+1/22/24, 6:00 PM - Bob: Sorry, busy again
+1/24/24, 8:00 AM - Alice: Hey, is everything alright?
+1/24/24, 2:00 PM - Bob: Yeah, just a lot going on
+1/26/24, 9:00 AM - Alice: Okay, well I'm here if you want to talk
+1/26/24, 7:00 PM - Bob: Thanks
+1/28/24, 10:00 AM - Alice: Hey
+1/29/24, 11:00 AM - Bob: Hey

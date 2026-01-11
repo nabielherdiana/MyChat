@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover fun patterns in your chat conversations">
+    <title>MyChat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/summary-cards.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script>
+        window.onerror = function (msg, url, line, col, error) {
+            alert("⚠️ Application Error:\n" + msg + "\n\nLine: " + line + "\nFile: " + url);
+            return false;
+        };
+    </script>
+</head>
+
+<body data-theme="dark">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">💬</span>
+                <h1 data-i18n="appTitle">MyChat</h1>
+            </div>
+            <div class="header-controls">
+                <div class="theme-toggle">
+                    <button class="theme-btn" data-theme="light" aria-label="Light Mode">☀️</button>
+                    <button class="theme-btn active" data-theme="dark" aria-label="Dark Mode">🌙</button>
+                </div>
+                <div class="language-toggle">
+                    <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧 EN</button>
+                    <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">🇮🇩 ID</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Introduction Section -->
+        <section class="section intro-section">
+            <div class="container">
+                <h2 data-i18n="introTitle">Your Chat, Your Story</h2>
+                <p class="intro-text" data-i18n="introText">
+                    Curious about how your conversations evolve over time? Upload your chat and discover fun patterns
+                    you might have missed!
+                </p>
+                <div class="what-this-is">
+                    <div class="is-box">
+                        <h3 data-i18n="whatThisIs">What you'll discover</h3>
+                        <ul>
+                            <li data-i18n="does1">When you chat the most (peak hours!)</li>
+                            <li data-i18n="does2">Who uses more emojis 😊</li>
+                            <li data-i18n="does3">Your longest chat streaks 🔥</li>
+                            <li data-i18n="does4">Message patterns and trends</li>
+                        </ul>
+                    </div>
+                    <div class="is-not-box">
+                        <h3 data-i18n="whatThisIsNot">What we don't do</h3>
+                        <ul>
+                            <li data-i18n="doesNot1">We never judge your relationship</li>
+                            <li data-i18n="doesNot2">We can't read emotions or feelings</li>
+                            <li data-i18n="doesNot3">We don't predict anything</li>
+                            <li data-i18n="doesNot4">Your data stays with you only</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="section upload-section">
+            <div class="container">
+                <h2 data-i18n="uploadTitle">Drop Your Chat Here</h2>
+
+                <div class="privacy-notice">
+                    <span class="privacy-icon">🔒</span>
+                    <p data-i18n="privacyNotice">
+                        <strong>100% Private:</strong> Everything stays in your browser. Nothing is uploaded, stored, or
+                        shared. Promise!
+                    </p>
+                </div>
+
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p data-i18n="uploadPrompt">Drag and drop your chat file here, or click to browse</p>
+                    <p class="upload-hint" data-i18n="uploadHint">Supports .zip, .txt, .csv, .html</p>
+                    <input type="file" id="fileInput" accept=".txt,.csv,.html,.htm,.zip" hidden>
+                </div>
+
+                <div class="file-info" id="fileInfo" hidden>
+                    <span class="file-name" id="fileName"></span>
+                    <button class="btn-remove" id="removeFile" data-i18n="removeFile">Remove</button>
+                </div>
+
+                <button class="btn-primary" id="analyzeBtn" disabled data-i18n="analyzeBtn">
+                    Let's Explore! 🚀
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <section class="section loading-section" id="loadingSection" hidden>
+            <div class="container">
+                <div class="loading-spinner"></div>
+                <p data-i18n="loadingText">Crunching the numbers...</p>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="section results-section" id="resultsSection" hidden>
+            <div class="container">
+                <h2 data-i18n="resultsTitle">Here's What We Found!</h2>
+
+                <!-- Participant Filter -->
+                <div id="participantFilter" class="participant-filter-container">
+                    <div class="filter-header" onclick="toggleFilter()">
+                        <div class="filter-title">
+                            <span>👥 Manage Participants</span>
+                            <span id="activeCount" class="badge">All selected</span>
+                        </div>
+                        <span class="filter-toggle-icon">▼</span>
+                    </div>
+                    <div class="filter-content" id="filterContent">
+                        <div class="participant-list-grid" id="participantList">
+                            <!-- Checkboxes injected here -->
+                        </div>
+                        <div class="date-filter-container">
+                            <label class="date-input-group">
+                                <span>Start</span>
+                                <input type="date" id="startDate">
+                            </label>
+                            <label class="date-input-group">
+                                <span>End</span>
+                                <input type="date" id="endDate">
+                            </label>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="filter-btn" onclick="selectAllParticipants(false)">Deselect All</button>
+                            <button class="filter-btn" onclick="selectAllParticipants(true)">Select All</button>
+                            <button class="filter-btn primary" onclick="applyParticipantFilter()">Update
+                                Analysis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metadata Summary -->
+                <div class="metadata-card" id="metadataCard">
+                    <div class="meta-item">
+                        <span class="meta-label" data-i18n="totalMessages">Total Messages</span>
+                        <span class="meta-value" id="totalMessages">0</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label" data-i18n="dateRange">Time Span</span>
+                        <span class="meta-value" id="dateRange">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label" data-i18n="participants">Participants</span>
+                        <span class="meta-value" id="participantsInfo">-</span>
+                    </div>
+                </div>
+
+                <!-- Emoji Analysis -->
+                <div class="analysis-card" id="emojiCard">
+                    <h3 data-i18n="emojiTitle">Emoji Vibes 😊</h3>
+                    <p class="analysis-desc" data-i18n="emojiDesc">Who's the emoji king or queen in this chat?</p>
+                    <div class="emoji-display" id="emojiDisplay">
+                        <div class="emoji-stats" id="emojiStats"></div>
+                    </div>
+                    <div class="interpretation" id="emojiInterpretation"></div>
+                </div>
+
+                <!-- Peak Hours -->
+                <div class="analysis-card" id="peakHoursCard">
+                    <h3 data-i18n="peakHoursTitle">When Do You Chat Most? 🕐</h3>
+                    <p class="analysis-desc" data-i18n="peakHoursDesc">Discover your peak chatting hours and favorite
+                        days!</p>
+                    <div class="peak-hours-display" id="peakHoursDisplay">
+                        <div class="heatmap-container" id="heatmapContainer"></div>
+                        <div class="peak-summary" id="peakSummary"></div>
+                    </div>
+                    <div class="interpretation" id="peakInterpretation"></div>
+                </div>
+
+                <!-- Streaks -->
+                <div class="analysis-card" id="streaksCard">
+                    <h3 data-i18n="streaksTitle">Chat Streaks 🔥</h3>
+                    <p class="analysis-desc" data-i18n="streaksDesc">How many days in a row did you keep the
+                        conversation going?</p>
+                    <div class="streaks-display" id="streaksDisplay">
+                        <div class="streak-stat">
+                            <span class="streak-value" id="longestStreak">0</span>
+                            <span class="streak-label" data-i18n="longestStreak">Longest Streak</span>
+                        </div>
+                        <div class="streak-stat">
+                            <span class="streak-value" id="currentStreak">0</span>
+                            <span class="streak-label" data-i18n="currentStreak">Current Streak</span>
+                        </div>
+                        <div class="streak-stat">
+                            <span class="streak-value" id="activeDays">0</span>
+                            <span class="streak-label" data-i18n="activeDays">Active Days</span>
+                        </div>
+                    </div>
+                    <div class="interpretation" id="streakInterpretation"></div>
+                </div>
+
+                <!-- Message Activity -->
+                <div class="analysis-card">
+                    <h3 data-i18n="activityTitle">Message Activity</h3>
+                    <p class="analysis-desc" data-i18n="activityDesc">How the conversation volume changed over time</p>
+                    <div class="chart-container">
+                        <canvas id="activityChart"></canvas>
+                    </div>
+                    <div class="interpretation" id="activityInterpretation"></div>
+                </div>
+
+                <!-- First/Last Message -->
+                <div class="analysis-card" id="firstLastCard">
+                    <h3 data-i18n="firstLastTitle">Morning Bird vs Night Owl 🌅🌙</h3>
+                    <p class="analysis-desc" data-i18n="firstLastDesc">Who sends the first message of the day? Who
+                        closes the night?</p>
+                    <div class="first-last-display" id="firstLastDisplay"></div>
+                    <div class="interpretation" id="firstLastInterpretation"></div>
+                </div>
+
+                <!-- Initiation Balance -->
+                <div class="analysis-card">
+                    <h3 data-i18n="initiationTitle">Who Starts the Chat?</h3>
+                    <p class="analysis-desc" data-i18n="initiationDesc">Let's see who usually says hi first!</p>
+                    <div class="chart-container chart-container-small">
+                        <canvas id="initiationChart"></canvas>
+                    </div>
+                    <div class="interpretation" id="initiationInterpretation"></div>
+                </div>
+
+                <!-- Message Length -->
+                <div class="analysis-card" id="lengthCard">
+                    <h3 data-i18n="lengthTitle">Message Depth</h3>
+                    <p class="analysis-desc" data-i18n="lengthDesc">Are your messages getting longer or shorter over
+                        time?</p>
+                    <div class="length-stats" id="lengthStats"></div>
+                    <div class="chart-container">
+                        <canvas id="lengthChart"></canvas>
+                    </div>
+                    <div class="interpretation" id="lengthInterpretation"></div>
+                </div>
+
+                <!-- Language Usage -->
+                <div class="analysis-card">
+                    <h3 data-i18n="wordsTitle">Most Used Words</h3>
+                    <p class="analysis-desc" data-i18n="wordsDesc">The words you both use the most (without the boring
+                        common ones)</p>
+                    <div class="word-cloud-container">
+                        <canvas id="wordCloudCanvas" width="600" height="300"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="topWordsChart"></canvas>
+                    </div>
+                    <div class="interpretation" id="wordsInterpretation"></div>
+                </div>
+
+                <!-- Conversation Rhythm -->
+                <div class="analysis-card rhythm-card">
+                    <h3 data-i18n="rhythmTitle">Chat Rhythm</h3>
+                    <p class="analysis-desc" data-i18n="rhythmDesc">The overall vibe of your conversation flow</p>
+                    <div class="rhythm-indicator" id="rhythmIndicator">
+                        <span class="rhythm-label" id="rhythmLabel">-</span>
+                    </div>
+                    <div class="interpretation" id="rhythmInterpretation"></div>
+                </div>
+
+                <!-- Reflection Summary -->
+                <div class="analysis-card reflection-card">
+                    <h3 data-i18n="reflectionTitle">The Story So Far</h3>
+                    <div class="reflection-content" id="reflectionContent"></div>
+                </div>
+
+                <!-- Interpretation Limits -->
+                <div class="limits-card">
+                    <h3 data-i18n="limitsTitle">A Quick Reality Check</h3>
+                    <div class="limits-grid">
+                        <div class="limits-can">
+                            <h4 data-i18n="canShowTitle">What we can tell you</h4>
+                            <ul>
+                                <li data-i18n="canShow1">Patterns in timing and frequency</li>
+                                <li data-i18n="canShow2">Who initiates more often</li>
+                                <li data-i18n="canShow3">Word and emoji usage habits</li>
+                                <li data-i18n="canShow4">Changes in activity over time</li>
+                            </ul>
+                        </div>
+                        <div class="limits-cannot">
+                            <h4 data-i18n="cannotShowTitle">What we can't tell you</h4>
+                            <ul>
+                                <li data-i18n="cannotShow1">Why someone was slow to reply</li>
+                                <li data-i18n="cannotShow2">What anyone was feeling</li>
+                                <li data-i18n="cannotShow3">Whether someone is "ghosting"</li>
+                                <li data-i18n="cannotShow4">The true quality of your relationship</li>
+                                <li data-i18n="cannotShow5">What will happen next</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="limits-note" data-i18n="limitsNote">
+                        These are just patterns, not conclusions. A slow reply might just mean someone was busy. Context
+                        always matters!
+                    </p>
+                </div>
+
+                <!-- Summary Cards -->
+                <div id="summaryCardsContainer"></div>
+
+                <button class="btn-secondary" id="newAnalysisBtn" data-i18n="newAnalysis">
+                    Analyze Another Chat
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footerText">MyChat: Your chats, your insights</p>
+            <p class="footer-note" data-i18n="footerNote">Made with curiosity, not judgment.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/app.js"></script>
+</body>
+
+</html>

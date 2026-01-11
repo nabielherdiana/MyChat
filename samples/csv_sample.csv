@@ -1,0 +1,60 @@
+timestamp,sender,message_text
+2024-01-01 09:00:00,Alice,Hey! How are you doing?
+2024-01-01 09:05:00,Bob,Hey! I'm good thanks! Just finished breakfast.
+2024-01-01 09:08:00,Alice,Nice! What did you have?
+2024-01-01 09:10:00,Bob,Just some eggs and toast. Simple but good!
+2024-01-01 09:12:00,Alice,Sounds delicious! I love a good breakfast
+2024-01-01 14:00:00,Bob,Hey what are you up to?
+2024-01-01 14:05:00,Alice,Just working on some projects. You?
+2024-01-01 14:08:00,Bob,Same here. Taking a quick break
+2024-01-01 14:10:00,Alice,Breaks are important! Don't overwork yourself
+2024-01-01 14:12:00,Bob,Thanks! I appreciate that
+2024-01-02 10:00:00,Alice,Good morning!
+2024-01-02 10:15:00,Bob,Good morning! How did you sleep?
+2024-01-02 10:18:00,Alice,Pretty well actually. Had a nice dream
+2024-01-02 10:22:00,Bob,That's great! What was it about?
+2024-01-02 10:25:00,Alice,I was flying over mountains. It was so peaceful
+2024-01-02 10:28:00,Bob,That sounds amazing! I love flying dreams
+2024-01-03 08:00:00,Bob,Morning! Ready for the day?
+2024-01-03 08:30:00,Alice,Morning! Yeah trying to be productive today
+2024-01-03 08:35:00,Bob,You got this! What's on your list?
+2024-01-03 08:40:00,Alice,Mostly work stuff but hoping to exercise later
+2024-01-03 08:45:00,Bob,That's a good balance! I should exercise too
+2024-01-04 09:00:00,Alice,Hey want to video call later?
+2024-01-04 09:30:00,Bob,Sure! What time works?
+2024-01-04 09:35:00,Alice,How about 7pm?
+2024-01-04 09:40:00,Bob,Perfect see you then!
+2024-01-04 19:30:00,Alice,That was a great call!
+2024-01-04 19:35:00,Bob,It really was! We should do it more often
+2024-01-04 19:38:00,Alice,Agreed! Same time next week?
+2024-01-04 19:40:00,Bob,Sounds like a plan!
+2024-01-05 10:00:00,Bob,Hey how's your day going?
+2024-01-05 11:00:00,Alice,Pretty good! Busy but good. Yours?
+2024-01-05 11:30:00,Bob,Same here. Looking forward to the weekend
+2024-01-05 12:00:00,Alice,Me too! Any plans?
+2024-01-05 12:30:00,Bob,Might go hiking if the weather is nice
+2024-01-06 08:00:00,Alice,Good morning!
+2024-01-06 10:00:00,Bob,Morning! Sorry for the late reply
+2024-01-06 10:05:00,Alice,No worries! How's the weather for hiking?
+2024-01-06 10:30:00,Bob,Looking good! Might head out soon
+2024-01-07 09:00:00,Bob,The hike was amazing!
+2024-01-07 12:00:00,Alice,That's great! Any photos?
+2024-01-07 14:00:00,Bob,Yeah I'll send some later
+2024-01-08 08:00:00,Alice,Did you send those photos?
+2024-01-08 12:00:00,Bob,Oh sorry forgot. Will do tonight
+2024-01-09 10:00:00,Alice,Still waiting for those pics!
+2024-01-09 18:00:00,Bob,Here they are finally!
+2024-01-09 18:30:00,Alice,These are beautiful!
+2024-01-10 09:00:00,Bob,Thanks! The view was incredible
+2024-01-11 08:00:00,Alice,Hey want to call tonight?
+2024-01-11 14:00:00,Bob,Maybe not tonight sorry
+2024-01-11 14:30:00,Alice,No problem another time then
+2024-01-13 10:00:00,Alice,Hey how's it going?
+2024-01-13 16:00:00,Bob,Okay I guess
+2024-01-14 09:00:00,Alice,Want to talk about it?
+2024-01-14 18:00:00,Bob,Not really but thanks
+2024-01-16 08:00:00,Alice,Hey
+2024-01-16 20:00:00,Bob,Hey
+2024-01-18 10:00:00,Alice,Miss talking to you
+2024-01-19 12:00:00,Bob,Yeah
+2024-01-21 09:00:00,Alice,Okay
