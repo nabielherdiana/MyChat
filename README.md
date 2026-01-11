@@ -24,4 +24,4 @@ Access the live version here: **[mychat.nabielherdiana.my.id](https://mychat.nab
 4. **Share**: Scroll down, pick a theme, and download your card!
 
 ---
-*Created with ❤️ by MyChat Team*
+*Created with ❤️ by Nabiel
