@@ -732,50 +732,48 @@
 /* ====== MOBILE RESPONSIVENESS ====== */
 @media (max-width: 850px) {
     .summary-cards-section {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 100px;
-        /* Lots of bottom space */
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 60px;
         overflow-x: hidden;
+        overflow-y: visible;
     }
 
     /* Add spacing to controls */
     .summary-controls {
-        padding: 0 16px;
-        gap: 12px;
+        padding: 0 12px;
+        gap: 10px;
+        margin-bottom: 20px;
     }
 
     .chat-wrapped-card {
-        /* Use scale to fit mobile screens */
+        /* Scale to fit, no negative margin */
         transform-origin: top center;
-        margin-bottom: -50px;
-        /* Safe margin to prevent cutoff */
+        margin-bottom: 20px;
+        /* Positive margin for breathing room */
     }
 
     /* Scale Story (450px width) */
     .chat-wrapped-card.story-layout {
-        transform: scale(0.65);
-        margin-top: 10px;
+        transform: scale(0.70);
+        margin-top: 0;
     }
 
     /* Scale Landscape (800px width) */
     .chat-wrapped-card.post-layout {
-        transform: scale(0.40);
-        margin-bottom: -220px;
-        margin-top: 10px;
+        transform: scale(0.45);
+        margin-top: 0;
     }
 }
 
 @media (max-width: 480px) {
     .chat-wrapped-card.story-layout {
-        transform: scale(0.55);
-        /* Smaller for compact phones */
-        margin-bottom: -120px;
+        transform: scale(0.60);
+        /* Fit smaller phones */
     }
 
     .chat-wrapped-card.post-layout {
-        transform: scale(0.32);
-        margin-bottom: -280px;
+        transform: scale(0.38);
     }
 
     /* Larger download button on mobile */
