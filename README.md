@@ -13,13 +13,13 @@
 - **100% Privacy Focused**: All data is processed **LOCALLY** in your browser. No chat data is uploaded to any server. Completely safe! 🔒
 
 ## 🌐 Try It Now
-Access the live version here: **[chat.nabielherdiana.my.id](https://chat.nabielherdiana.my.id)**
+Access the live version here: **[mychat.nabielherdiana.my.id](https://mychat.nabielherdiana.my.id)**
 
 ## 🛠️ How to Use
 1. **Export Chat**:
    - **WhatsApp**: Open Chat > Three Dots > More > Export Chat > "Without Media".
    - **Telegram**: Desktop > Export Chat History > Select "JSON".
-2. **Upload**: Open MyChat and upload the `.txt` or `.json` file.
+2. **Upload**: Open MyChat and upload the `.txt`, `.json` or you can use `.zip` file.
 3. **Analyze**: Wait a moment for the magic to happen! ✨
 4. **Share**: Scroll down, pick a theme, and download your card!
 
